@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>おうちレシピ帖 | 簡単・時短の家庭料理</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Kaisei+Decol:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">かんたん・時短・毎日ごはん</p>
+      <h1 class="hero__title">おうちレシピ帖</h1>
+      <p class="hero__lead">火を使わないレンジ調理から定番おかずまで。<br />家にある材料でパパッと作れるレシピを集めました。</p>
+      <a href="#recipes" class="hero__scroll" aria-label="レシピ一覧へ">
+        <span></span>
+      </a>
+    </div>
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
+    <div class="hero__blob hero__blob--3"></div>
+  </header>
+
+  <main>
+    <section id="recipes" class="recipes">
+      <div class="section-head">
+        <h2 class="section-head__title">レシピ一覧</h2>
+        <p class="section-head__count"><span id="recipe-count">0</span> 品</p>
+      </div>
+      <ul class="card-grid" id="card-grid"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> おうちレシピ帖</p>
+  </footer>
+
+  <script src="js/recipes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

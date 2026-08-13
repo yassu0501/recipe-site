@@ -1,0 +1,362 @@
+// 全レシピデータ。ingredientGroups の title が null の場合は見出しなしの基本材料。
+const RECIPES = [
+  {
+    id: 1,
+    name: "とんてき",
+    image: "image/food_stake.png",
+    servings: null,
+    catch: "ガツンと甘辛だれが食欲をそそる、豚ロースの王道おかず。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "豚ロース", amount: "2枚" },
+          { name: "塩、コショウ", amount: "適量" },
+        ],
+      },
+      {
+        title: "タレ",
+        items: [
+          { name: "しょうゆ", amount: "大さじ1" },
+          { name: "みりん", amount: "大さじ1" },
+          { name: "オイスターソース", amount: "小さじ2〜大さじ1" },
+          { name: "砂糖", amount: "小さじ1" },
+          { name: "しょうが（すりおろし or みじん）", amount: "大さじ1/2" },
+          { name: "にんにく（すりおろし or みじん）", amount: "大さじ1/2" },
+        ],
+      },
+    ],
+    steps: [
+      "豚ロースは筋のところに数か所包丁を入れ、塩コショウをする。叩くと柔らかくなり尚良し。",
+      "タレの材料を合わせておく。",
+      "フライパンに油を熱し、肉が焼けたらタレを投入。ほどよく煮詰まったら完成。",
+    ],
+  },
+  {
+    id: 2,
+    name: "レンジで簡単キーマカレー",
+    image: "image/food_keema_curry.png",
+    servings: null,
+    catch: "火を使わず電子レンジだけ。10分でできる本格キーマ。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "牛豚合挽き肉", amount: "200g" },
+          { name: "玉ねぎ", amount: "1/2個" },
+          { name: "温泉卵", amount: "1個" },
+          { name: "乾燥パセリ", amount: "お好みで" },
+        ],
+      },
+      {
+        title: "(A)",
+        items: [
+          { name: "カレールー", amount: "2片" },
+          { name: "ケチャップ", amount: "大さじ1.5" },
+          { name: "焼き肉のタレ", amount: "大さじ1.5" },
+          { name: "水", amount: "120cc" },
+        ],
+      },
+    ],
+    steps: [
+      "玉ねぎはみじん切りにする。",
+      "合挽き肉、玉ねぎ、(A)を耐熱容器に入れ、よく混ぜて軽くラップをする。",
+      "600Wのレンジで10分ほど加熱し、ほぐす。",
+      "ご飯にかけて温泉卵をのせ、お好みで乾燥パセリをかけて完成。",
+    ],
+  },
+  {
+    id: 3,
+    name: "まるみキッチンの白菜団子",
+    image: "image/food_tsumire.png",
+    servings: null,
+    catch: "ポリ袋で手を汚さず。ジューシーな肉団子と白菜の一体感。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "豚ひき肉", amount: "150g" },
+          { name: "にんにく", amount: "10g" },
+          { name: "白菜", amount: "200g" },
+          { name: "しょうゆ", amount: "大さじ1" },
+          { name: "片栗粉", amount: "大さじ1" },
+          { name: "鶏がらスープの素", amount: "小さじ1" },
+          { name: "めんつゆ（2倍濃縮）", amount: "大さじ2" },
+          { name: "ポン酢", amount: "適量" },
+          { name: "ごま油", amount: "適量" },
+        ],
+      },
+    ],
+    steps: [
+      "にんにくは皮ごと軽く潰して皮とヘタを取り、細かく潰す。白菜は洗って手でちぎる。",
+      "ポリ袋に豚ひき肉、にんにく、しょうゆ、鶏がらスープの素、片栗粉を入れよく揉み込む。",
+      "耐熱皿に白菜を並べ、めんつゆを回しかける。",
+      "ポリ袋の端をカットし、白菜の上に団子状に絞り出す。",
+      "ふんわりラップして電子レンジ600Wで6分加熱。",
+      "ポン酢・ごま油を回しかけ、完成。",
+    ],
+  },
+  {
+    id: 4,
+    name: "野菜たっぷり！ビビンバ",
+    image: "image/food_ishiyaki_bibinba.png",
+    servings: null,
+    catch: "野菜もお肉もこれ一皿で。ピリ辛キムチが後を引く丼。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "豚ひき肉", amount: "120g" },
+          { name: "人参", amount: "1/4本" },
+          { name: "小松菜", amount: "1株" },
+          { name: "もやし", amount: "1/2袋(90g)" },
+          { name: "キムチ", amount: "1パック(100g)" },
+          { name: "卵", amount: "2個" },
+          { name: "ごはん", amount: "適量" },
+          { name: "ごま油", amount: "小さじ2" },
+          { name: "にんにく、しょうがチューブ", amount: "各3cm" },
+          { name: "塩胡椒", amount: "適量" },
+        ],
+      },
+      {
+        title: "(A)",
+        items: [
+          { name: "鶏がらスープの素、醤油、コチュジャン", amount: "各小さじ1" },
+          { name: "白ごま", amount: "大さじ1" },
+        ],
+      },
+    ],
+    steps: [
+      "人参は皮を剥き細切り、小松菜は3cm幅に切る。",
+      "フライパンにごま油、にんにく・しょうがチューブ、豚ひき肉を入れ中火で炒め、人参も加え1〜2分炒める。",
+      "キムチ、小松菜、もやし、(A)を加え炒め合わせ、塩胡椒をふる。",
+      "丼にごはんを盛って炒めた具をのせ、お好みで温玉または卵黄をトッピングする。",
+    ],
+  },
+  {
+    id: 5,
+    name: "そぼろ丼",
+    image: "image/food_soboro_don.png",
+    servings: null,
+    catch: "材料を入れて煮るだけ。甘辛でご飯が進む定番そぼろ。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "鶏ももミンチ", amount: "200g" },
+          { name: "酒", amount: "大さじ1" },
+          { name: "醤油", amount: "大さじ2" },
+          { name: "みりん", amount: "大さじ1" },
+          { name: "砂糖", amount: "大さじ1" },
+          { name: "水", amount: "適量" },
+        ],
+      },
+    ],
+    steps: [
+      "材料をフライパンに入れて中火にかける。",
+      "肉に火が通ったら火を弱め、ふたをして約7分煮込む。",
+      "できあがり。",
+    ],
+  },
+  {
+    id: 6,
+    name: "中華スープ",
+    image: "image/food_konsome_soup.png",
+    servings: null,
+    catch: "うまみ調味料をきかせた、お店のような一杯。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [{ name: "長ネギ", amount: "適量" }],
+      },
+      {
+        title: "(A)",
+        items: [
+          { name: "水", amount: "450cc" },
+          { name: "酒", amount: "大さじ1" },
+          { name: "醤油", amount: "小さじ2" },
+          { name: "オイスターソース", amount: "小さじ2" },
+          { name: "創味シャンタン", amount: "小さじ1" },
+          { name: "白だし", amount: "大さじ1/2" },
+          { name: "味の素", amount: "4振り" },
+          { name: "ラード", amount: "5〜6cm" },
+          { name: "黒胡椒", amount: "適量" },
+          { name: "ごま油", amount: "小さじ1" },
+        ],
+      },
+    ],
+    steps: [
+      "長ネギをみじん切りにする。",
+      "鍋に(A)を入れて加熱する。",
+      "器に長ネギを入れ、2を注いで完成。",
+    ],
+  },
+  {
+    id: 7,
+    name: "プルコギ",
+    image: "image/ダウンロード.jpeg",
+    servings: null,
+    catch: "甘辛だれが染みた牛肉と野菜。ご飯にもお酒にも合う韓国料理。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [{ name: "牛肉薄切り", amount: "200g" }],
+      },
+      {
+        title: "(A) 漬けだれ",
+        items: [
+          { name: "にんにくすりおろし", amount: "1〜2かけ" },
+          { name: "醤油", amount: "大さじ1と1/2" },
+          { name: "酒", amount: "大さじ1と1/2" },
+          { name: "コチュジャン", amount: "大さじ1" },
+          { name: "ごま油", amount: "大さじ1" },
+          { name: "砂糖", amount: "小さじ2" },
+        ],
+      },
+      {
+        title: "野菜・仕上げ",
+        items: [
+          { name: "玉ねぎ", amount: "中1/2個" },
+          { name: "にんじん", amount: "1/3〜1/2本" },
+          { name: "もやし", amount: "1/2袋" },
+          { name: "にら", amount: "1/2束" },
+          { name: "塩こしょう", amount: "少々" },
+          { name: "白ごま", amount: "適量" },
+          { name: "ごま油（仕上げ用）", amount: "少々" },
+        ],
+      },
+    ],
+    steps: [
+      "玉ねぎ・人参は細切り、にらは5cmほどに切る。",
+      "肉に(A)を揉み込み、ラップをして冷蔵庫で30分ほど味を馴染ませる。",
+      "フライパンに油を熱し、玉ねぎ・にんじん・もやしを炒める。",
+      "肉も加えてよく炒め、塩こしょうで味を調整する。",
+      "最後ににら・白ごま・ごま油を加えサッと炒めて完成。",
+    ],
+  },
+  {
+    id: 8,
+    name: "もやしハンバーグ",
+    image: "image/food_wafu_hamburg.png",
+    servings: null,
+    catch: "豆腐入りでヘルシー、もやしでかさ増し。ふんわり食感。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [{ name: "もやし", amount: "1袋" }],
+      },
+      {
+        title: "(A) 肉だね",
+        items: [
+          { name: "鶏ひき肉", amount: "300g" },
+          { name: "絹豆腐", amount: "150g" },
+          { name: "塩胡椒、鶏ガラ", amount: "各小さじ1/2" },
+          { name: "しょうがチューブ", amount: "少々" },
+          { name: "片栗粉", amount: "大さじ1" },
+          { name: "ごま油", amount: "大さじ1" },
+        ],
+      },
+    ],
+    steps: [
+      "ポリ袋にAを入れてよくこねる。",
+      "もやしを袋の上から細かく潰して、ボウルに入れる。",
+      "肉だねの袋の端を切り、もやしの上に絞り出す。肉だねの周りにもやしをまぶし、ハンバーグの要領で握ってフライパンへ。",
+      "ごま油を回しかけて3分蒸し焼き。",
+      "裏返して2分蒸し焼きして完成。",
+    ],
+  },
+  {
+    id: 9,
+    name: "豚とカボチャの味噌炒め",
+    image: "image/kabocha.png",
+    servings: "2人分",
+    catch: "ほくほくカボチャに味噌だれがからむ、ごはんの進む炒めもの。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "豚こま切", amount: "200g" },
+          { name: "カボチャ", amount: "1/2個" },
+          { name: "玉ねぎ", amount: "1/2個" },
+          { name: "塩コショウ", amount: "少々" },
+          { name: "サラダ油", amount: "大さじ1" },
+        ],
+      },
+      {
+        title: "合わせ調味料",
+        items: [
+          { name: "酒", amount: "大さじ1" },
+          { name: "みそ", amount: "大さじ1" },
+          { name: "おろししょうが", amount: "小さじ1/2" },
+        ],
+      },
+    ],
+    steps: [
+      "豚肉は塩コショウを振り、揉み込む。",
+      "カボチャは縦半分に切り、横1cm幅に切る。耐熱容器にかぼちゃを入れてふんわりラップをし、600Wのレンジで2分加熱。玉ねぎは薄切りにする。",
+      "ボウルに合わせ調味料を入れて混ぜる。",
+      "フライパンにサラダ油を入れて熱し、豚肉を入れて肉の色が変わるまで中火で炒める。",
+      "玉ねぎを加えてしんなりするまで炒め、かぼちゃ、合わせ調味料を加えて炒め合わせる。",
+    ],
+  },
+  {
+    id: 10,
+    name: "鶏胸肉の塩大葉焼き",
+    image: "image/food_chicken_sotee.png",
+    servings: null,
+    catch: "大葉香る塩味であっさり。片栗粉でカリッとジューシー。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "鶏むね肉", amount: "350g" },
+          { name: "鶏ガラスープ", amount: "小さじ1と1/2" },
+          { name: "オイスターソース", amount: "小さじ1" },
+          { name: "塩", amount: "小さじ1/4" },
+          { name: "酒", amount: "小さじ1" },
+          { name: "おろしにんにく", amount: "1片" },
+          { name: "大葉", amount: "10枚" },
+          { name: "黒コショウ", amount: "適量" },
+          { name: "片栗粉", amount: "適量" },
+          { name: "油", amount: "大さじ1" },
+          { name: "アジシオ", amount: "適量" },
+          { name: "レモン", amount: "適量" },
+        ],
+      },
+    ],
+    steps: [
+      "鶏胸肉を細かく切る。",
+      "鶏がらスープ小さじ1半、オイスターソース小さじ1、塩小さじ1/4、酒小さじ1、おろしにんにく1片、大葉10枚、黒胡椒を混ぜる。",
+      "片栗粉をつけ、多めの油で焼く。",
+      "アジシオとレモンをかけて完成。",
+    ],
+  },
+  {
+    id: 11,
+    name: "鶏胸肉のパイタン鍋",
+    image: "image/food_samugetan.png",
+    servings: null,
+    catch: "生米でとろみをつけた白湯風スープ。体があたたまる鍋。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "鶏むね肉", amount: "1枚（350g）" },
+          { name: "白菜", amount: "500g" },
+          { name: "生米", amount: "大さじ1半" },
+          { name: "水", amount: "800cc" },
+          { name: "鶏がらスープ", amount: "小さじ2" },
+          { name: "こんぶだし", amount: "小さじ2" },
+          { name: "塩", amount: "2つまみ" },
+          { name: "酒", amount: "大さじ1半" },
+          { name: "片栗粉", amount: "大さじ1半" },
+        ],
+      },
+    ],
+    steps: [
+      "水800cc、生米大さじ1半、鶏がらスープ、こんぶだし、白菜500gを入れ、蓋をして15分煮る。",
+      "鶏むね肉350gを薄切りにし、塩2つまみ、酒大さじ1半、片栗粉大さじ1半を混ぜる。",
+      "鍋に入れ、煮えたら塩、コショウ、柚子胡椒でいただく。",
+    ],
+  },
+];
