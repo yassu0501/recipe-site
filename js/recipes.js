@@ -359,4 +359,94 @@ const RECIPES = [
       "鍋に入れ、煮えたら塩、コショウ、柚子胡椒でいただく。",
     ],
   },
+  {
+    id: 12,
+    name: "鶏むね肉と大根の煮込み",
+    image: "image/food_daikon_nikomi.png",
+    servings: null,
+    catch: "弱火でコトコト1時間。味の染みた大根と、ほろほろの鶏むね肉。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "鶏むね肉", amount: "1枚（350g）" },
+          { name: "大根", amount: "300〜400g" },
+          { name: "水", amount: "250cc" },
+          { name: "酒", amount: "大さじ3" },
+          { name: "醤油", amount: "大さじ2" },
+          { name: "鶏がらスープ", amount: "小さじ1半" },
+        ],
+      },
+    ],
+    steps: [
+      "鍋に大根350g、鶏むね肉350g、水250cc、酒大さじ3、醤油大さじ2、鶏がらスープ小さじ1半を入れて沸かす。",
+      "蓋をして弱火で1時間煮込んで完成。",
+    ],
+  },
+  {
+    id: 13,
+    name: "超絶柔らかネギ塩レモン",
+    image: "image/food_negishio_lemon.png",
+    servings: null,
+    catch: "片栗粉をもみこんでゆでるから、むね肉がしっとり柔らか。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [{ name: "鶏むね肉", amount: "350g" }],
+      },
+      {
+        title: "鶏肉の下味",
+        items: [
+          { name: "塩コショウ", amount: "適量" },
+          { name: "酒", amount: "大さじ1" },
+          { name: "片栗粉", amount: "小さじ4" },
+        ],
+      },
+      {
+        title: "ネギだれ",
+        items: [
+          { name: "長ねぎ", amount: "80g" },
+          { name: "塩", amount: "小さじ1/2" },
+          { name: "味の素", amount: "8振り" },
+          { name: "オイスターソース", amount: "小さじ1" },
+          { name: "レモン汁", amount: "小さじ1" },
+          { name: "ごま油", amount: "大さじ1と1/2" },
+          { name: "砂糖", amount: "小さじ1/2" },
+          { name: "黒コショウ", amount: "適量" },
+        ],
+      },
+    ],
+    steps: [
+      "長ねぎ80g、塩小さじ1/2、味の素8振り、オイスターソース小さじ1、レモン汁小さじ1、ごま油大さじ1半、砂糖小さじ1/2、黒胡椒を混ぜてネギだれを作っておく。",
+      "鶏むね肉350gに塩コショウ、酒大さじ1、片栗粉小さじ4をもみこむ。",
+      "さっとゆで、ざるにあげて水気を切る。",
+      "ネギだれとからめて完成。",
+    ],
+  },
+  {
+    id: 14,
+    name: "虚無肉豆腐",
+    image: "image/food_niku_dofu.png",
+    servings: null,
+    catch: "小鍋ひとつ、材料は豆腐と豚こまだけ。疲れた日の甘辛おかず。",
+    ingredientGroups: [
+      {
+        title: null,
+        items: [
+          { name: "木綿豆腐", amount: "1/2丁（175g）" },
+          { name: "豚こま肉", amount: "120g" },
+          { name: "砂糖", amount: "小さじ1" },
+          { name: "醤油", amount: "大さじ1" },
+          { name: "これうまつゆ（白だしでも可）", amount: "小さじ2" },
+          { name: "酒", amount: "大さじ1半" },
+          { name: "みりん", amount: "大さじ1半" },
+        ],
+      },
+    ],
+    steps: [
+      "小鍋に木綿豆腐1/2丁（175g）、砂糖小さじ1、醤油大さじ1、これうまつゆ（または白だし）小さじ2、酒大さじ1半、みりん大さじ1半を入れて沸かす。",
+      "蓋をして弱火で数分煮る。",
+      "豚こま肉120gを入れ、サッと煮て完成。",
+    ],
+  },
 ];
